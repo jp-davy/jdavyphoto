@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title ?? site:name }}</title>
+        <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+    </head>
+    <body class="font-sans leading-normal text-gray-800">
+        <div id="app">
+            <header class="max-w-7xl mx-auto">
+                {{ partial:nav }}
+            </header>
+            <div id="content" class="max-w-full mx-auto p-4">
+                {{ template_content }}
+            </div>
+            <footer class="text-gray-500 container relative text-center p-4 pb-12 pin-x pin-b border-t-2 border-gray-100 m-auto text-xs">
+                © {{ now|format:Y }} Jessica Davy Photography, LLC. Made with <a href="https://statamic.com/" target="_blank" class="text-orange-800 no-underline hover:text-orange-600">Statamic</a>, <a href="https://tailwindcss.com" target="_blank" class="text-orange-800 no-underline hover:text-orange-600">Tailwind CSS</a>, and <a href="https://github.com/alpinejs/alpine" target="_blank" class="text-orange-800 no-underline hover:text-orange-600">AlpineJS</a>.
+            </footer>
+        </div>
+        <script src="{{ mix src='/js/site.js' }}"></script>
+    </body>
+</html>
